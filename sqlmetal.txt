@@ -1,0 +1,1 @@
+sqlmetal /conn:"Data Source=db-tgsanalys-test.du.se;Initial Catalog=dbTGSAnalysTest;Integrated Security=True;Pooling=False" /code:C:\dotnwb3\db.cs

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2A8B1C1-81D5-4137-BD12-222F0135CB73}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NarvarldDB</RootNamespace>
+    <AssemblyName>NarvarldDB</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\read-wd-dump\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="affclass.cs" />
+    <Compile Include="authorclass.cs" />
+    <Compile Include="db.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormColor.Designer.cs">
+      <DependentUpon>FormColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompetitors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCompetitors.Designer.cs">
+      <DependentUpon>FormCompetitors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisplay.Designer.cs">
+      <DependentUpon>FormDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFillDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFillDB.Designer.cs">
+      <DependentUpon>FormFillDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFinance.Designer.cs">
+      <DependentUpon>FormFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMacro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMacro.Designer.cs">
+      <DependentUpon>FormMacro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegional.Designer.cs">
+      <DependentUpon>FormRegional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSankey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSankey.Designer.cs">
+      <DependentUpon>FormSankey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectData.Designer.cs">
+      <DependentUpon>FormSelectData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectSpecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectSpecial.Designer.cs">
+      <DependentUpon>FormSelectSpecial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hbookclass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pubclass.cs" />
+    <Compile Include="util.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormColor.resx">
+      <DependentUpon>FormColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCompetitors.resx">
+      <DependentUpon>FormCompetitors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisplay.resx">
+      <DependentUpon>FormDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFillDB.resx">
+      <DependentUpon>FormFillDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFinance.resx">
+      <DependentUpon>FormFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMacro.resx">
+      <DependentUpon>FormMacro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegional.resx">
+      <DependentUpon>FormRegional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSankey.resx">
+      <DependentUpon>FormSankey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectData.resx">
+      <DependentUpon>FormSelectData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectSpecial.resx">
+      <DependentUpon>FormSelectSpecial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

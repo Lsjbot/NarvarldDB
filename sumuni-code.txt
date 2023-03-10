@@ -1,0 +1,35 @@
+//------------------------  
+            Series sumseries = getsumseries(unilist);
+            Dictionary<int, double> sumdict = new Dictionary<int, double>();
+
+//------------------------  
+
+            if ( uniname == focusname && !CB_sumuni.Checked)
+                     ss.BorderWidth = 5;
+//------------------------  
+
+
+                    if (CB_sumuni.Checked)
+                    {
+                        if (!sumdict.ContainsKey(year))
+                            sumdict.Add(year, amount);
+                        else
+                            sumdict[year] += amount;
+                    }
+
+//------------------------  
+
+            if ( CB_sumuni.Checked)
+            {
+                foreach (int year in sumdict.Keys)
+                {
+                    if ( CB_meanuni.Checked)
+                        sumseries.Points.AddXY(year, sumdict[year]/unilist.Count);
+                    else
+                        sumseries.Points.AddXY(year, sumdict[year]);
+                }
+                ssmax = sumdict.Values.Max();
+                chart1.Series.Add(sumseries);
+            }
+
+//------------------------  
